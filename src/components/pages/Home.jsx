@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography, Avatar, Button } from "@mui/material";
 import "@fontsource/unbounded"; // Defaults to weight 400
 import profile from "../../assets/profile.jpg";
+import { Calculate } from "@mui/icons-material";
 // import { FormatAlignJustifyOutlined } from "@mui/icons-material";
 
 const IntroSection = () => {
@@ -9,10 +10,10 @@ const IntroSection = () => {
     <Box
    
       sx={{
-        display: {md :"flex" , sm : "block"},
+        display: "flex",
         justifyContent: "space-around",
         alignItems: "center",
-        paddingTop: {md : "10px" , sm : "100px"},
+        paddingTop: {md : "10px" , sm : "80px"},
         backgroundColor: "#121212",
         color: "#ffffff",
         minHeight: "100vh",
@@ -93,7 +94,7 @@ const IntroSection = () => {
         </Typography>
 
         <Typography
-          sx={{ marginTop: "20px", color: "#a0a0a0" , fontSize :"1vw"}}
+          sx={{ marginTop: "20px", color: "#a0a0a0" , fontSize : "calc(0.25rem + 1vw)"}}
         >
           UI/UX | Product Design Lead | 5+ Years Experience
         </Typography>
@@ -107,7 +108,7 @@ const IntroSection = () => {
         alt="Abid"
         sx={{
           width: "30vw",
-          height: "30vw",
+          height: "35vw",
           borderRadius: "10px",
           // marginRight :"200px"
         }}
