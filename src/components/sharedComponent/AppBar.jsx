@@ -14,7 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 
 // import profile from "../../assets/profile.jpg";
 
-const pages = ["Products", "Pricing", "Blog"];
+const pages = ["Portfolio", "Pricing", "Blog"];
 
 
 function ResponsiveAppBar() {

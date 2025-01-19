@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Avatar, Button } from "@mui/material";
 import "@fontsource/unbounded"; // Defaults to weight 400
 import profile from "../../assets/profile.jpg";
@@ -6,6 +6,11 @@ import { Calculate } from "@mui/icons-material";
 // import { FormatAlignJustifyOutlined } from "@mui/icons-material";
 
 const IntroSection = () => {
+
+const [state , setState] = useState("Product design")
+
+
+
   return (
     <Box
    
@@ -84,12 +89,14 @@ const IntroSection = () => {
             variant="outlined"
             sx={{
               borderRadius: "20px",
-              marginLeft: "10px",
+              marginLeft: "20px",
               fontWeight: "800",
+              color: "white",
+              border : "2px solid green"
             }}
           >
             
-            Product Design
+            {state}
           </Button>
         </Typography>
 
