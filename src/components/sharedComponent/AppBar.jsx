@@ -11,10 +11,11 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 
 import MenuItem from "@mui/material/MenuItem";
+import { useNavigate } from "react-router-dom";
 
 // import profile from "../../assets/profile.jpg";
 
-const pages = ["Portfolio", "Pricing", "Blog"];
+const pages = ["Portfolio","Projects" , "Pricing", "Blog"];
 
 
 function ResponsiveAppBar() {
@@ -31,10 +32,12 @@ function ResponsiveAppBar() {
   };
 
 
+  const navigate = useNavigate()
+
 
   return (
     <AppBar
-      position="fixed"
+      position="static"
       sx={{
         backgroundColor: "black",
       }}
@@ -128,7 +131,7 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={()=>{navigate(`/${page}`)}}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 {page}
