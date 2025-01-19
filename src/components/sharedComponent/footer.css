@@ -1,6 +1,7 @@
 .footer{
 
-
+display: flex;
+justify-content: center;
 background-color: rgb(29, 27, 27);
 
 

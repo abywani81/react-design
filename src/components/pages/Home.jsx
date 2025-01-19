@@ -1,19 +1,21 @@
 import React from "react";
-import { Box, Typography, Button, Avatar } from "@mui/material";
-
+import { Box, Typography, Avatar, Button } from "@mui/material";
+import "@fontsource/unbounded"; // Defaults to weight 400
 import profile from "../../assets/profile.jpg";
+// import { FormatAlignJustifyOutlined } from "@mui/icons-material";
 
 const IntroSection = () => {
   return (
     <Box
+   
       sx={{
-        display: "flex",
+        display: {md :"flex" , sm : "block"},
         justifyContent: "space-around",
-        // alignItems: "center",
-        paddingTop : "200px",
+        alignItems: "center",
+        paddingTop: {md : "10px" , sm : "100px"},
         backgroundColor: "#121212",
         color: "#ffffff",
-        height: "100vh",
+        minHeight: "100vh",
       }}
     >
       {/* Left Section */}
@@ -22,69 +24,81 @@ const IntroSection = () => {
           marginLeft: "0px",
         }}
       >
-        <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-          Hi, I'm Abid
+        <Typography
+          // variant="h1"
+          sx={{
+            fontWeight: "bold",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <p
+            style={{
+              color: "rgba(0, 0, 0, 0.1)", // Black color with 20% opacity
+              WebkitTextStroke: "3px white", // White stroke
+              WebkitTextFillColor: "rgba(0, 0, 0, 0.2)", // Ensures fill respects the opacity
+              fontSize : "5vw",
+              // margin: "0 0 0 0", // Add a small margin for spacing
+             
+            }}
+          >
+            Hi
+          </p>
+          <p
+            style={{
+              fontFamily: "'Unbounded', sans-serif", // Apply the Unbounded font
+              // margin: "0 0 0 10px", // Add a small margin for spacing,
+              fontSize : "5vw"
+              
+            
+            }}
+          >
+            , I'm Abid Wani
+          </p>
         </Typography>
 
         <Typography
-          variant="h5"
-          sx={{ marginTop: "20px", marginBottom: "10px", color: "#cfcfcf" }}
+          sx={{
+            marginTop: "10px",
+            marginBottom: "10px",
+            color: "#cfcfcf",
+            fontFamily: "Unbounded",
+            fontSize: "2vw",
+          }}
         >
           Crafting Intuitive and Impactful
         </Typography>
 
         <Typography
-          variant="h5"
-          sx={{ marginBottom: "20px", color: "#cfcfcf" }}
-        >
-          Digital Experiences
-        </Typography>
-
-        <Typography
-          variant="body1"
+          // variant="h6"
           sx={{
-            display: "inline-block",
-            padding: "5px 10px",
-            backgroundColor: "#1e88e5",
-            borderRadius: "20px",
-            color: "#ffffff",
-            fontWeight: "bold",
+            marginBottom: "20px",
+            color: "#cfcfcf",
+            fontFamily: "Unbounded",
+            fontSize: "2vw",
           }}
         >
-          Product Design
+          Digital Experiences
+          <Button
+            variant="outlined"
+            sx={{
+              borderRadius: "20px",
+              marginLeft: "10px",
+              fontWeight: "800",
+            }}
+          >
+            
+            Product Design
+          </Button>
         </Typography>
 
         <Typography
-          variant="body2"
-          sx={{ marginTop: "20px", color: "#a0a0a0" }}
+          sx={{ marginTop: "20px", color: "#a0a0a0" , fontSize :"1vw"}}
         >
           UI/UX | Product Design Lead | 5+ Years Experience
         </Typography>
 
         {/* Buttons */}
-        <Box sx={{ marginTop: "30px" }}>
-          <Button
-            variant="outlined"
-            sx={{
-              marginRight: "10px",
-              color: "#ffffff",
-              borderColor: "#ffffff",
-              textTransform: "none",
-            }}
-          >
-            View Resume
-          </Button>
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "#1e88e5",
-              color: "#ffffff",
-              textTransform: "none",
-            }}
-          >
-            Book a Call
-          </Button>
-        </Box>
       </Box>
 
       {/* Right Section */}
@@ -92,9 +106,9 @@ const IntroSection = () => {
         src={profile} // Replace with your image path
         alt="Abid"
         sx={{
-          width: "300px",
-          height: "300px",
-          borderRadius: "5px",
+          width: "30vw",
+          height: "30vw",
+          borderRadius: "10px",
           // marginRight :"200px"
         }}
       />
